@@ -1,0 +1,25 @@
+{
+  "name": "singonline-api-codealong",
+  "version": "1.0.0",
+  "description": "Mit allerførste node projekt",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Webudvikler-TechCollege/SingOnline-API-CodeAlong.git"
+  },
+  "author": "Makka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Webudvikler-TechCollege/SingOnline-API-CodeAlong/issues"
+  },
+  "homepage": "https://github.com/Webudvikler-TechCollege/SingOnline-API-CodeAlong#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.43.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
