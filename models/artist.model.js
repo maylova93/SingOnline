@@ -1,11 +1,11 @@
 import { supabase } from '../Config/supabase.config.js';
 
-export default class artistsModel {
-    static async getAllartists() {
+export  class artistModel {
+    static async getAllartist() {
         try {
             // Kald til database
             let { data, error } = await supabase
-                  .from('artists')
+                  .from('artist')
                   .select('name')
             if(error) {
                 throw new Error(error.message)
@@ -22,7 +22,7 @@ export default class artistsModel {
     static async getArtistById(id) {
         try {
             const { data, error } = await supabase
-                .from('artists')
+                .from('artist')
                 .select('id, name')
                 .eq('id', id)
             if(error) {
@@ -37,7 +37,7 @@ export default class artistsModel {
     static async createArtist(formdata) {
         try {
             const { data, error } = await supabase
-            .from('artists')
+            .from('artist')
             .insert([
                 {
                     name: formdata.name,
@@ -58,7 +58,7 @@ export default class artistsModel {
     }static async updateArtist(formdata){
         try{
             let { data, error } = await supabase
-                .from('artists')
+                .from('artist')
                 .update([
                     {
                         name: formdata.name,
@@ -83,7 +83,7 @@ export default class artistsModel {
 
         try{
             let { data, error } = await supabase
-           .from('artists')
+           .from('artist')
            .delete()
            .eq('id', formdata.id)
            if(error){

@@ -1,6 +1,6 @@
 import { supabase } from '../Config/supabase.config.js'
 
-export default class SongModel {
+export class SongModel {
 	static async getAllRecords() {
 		try {
 			const { data, error } = await supabase

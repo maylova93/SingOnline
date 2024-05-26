@@ -91,11 +91,15 @@ try{
    .delete()
    .eq('id', formdata.id)
 }
+catch (error) {
+    console.error(`Fejl i opdatering af album: ${error}`)
+}
+
 const data = await albumModel.deleteRecord(req.body)
 res.send(data)
 
    }
-   
+    }
    
 
 

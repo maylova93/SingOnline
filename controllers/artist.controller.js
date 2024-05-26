@@ -1,5 +1,5 @@
 import express from 'express';
-import artistModel from '../models/artist.model.js;
+import {artistModel} from '../models/artist.model.js'
 export const artistController = express.Router();
 
 artistController.get('/artist', async (req, res) => {
@@ -26,6 +26,7 @@ res.send(data)
 
  artistController.delete('/artist', async (req, res) => {
     console.log(req.body);
+	const data = await artistModel.deleteartist(req.body)
+	res.send(data)
+
  });
- const data = await artistModel.deleteartist(req.body)
- res.send(data)

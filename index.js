@@ -1,10 +1,10 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import { createClient } from '@supabase/supabase-js'
 import { supabase } from './config/supabase.config.js'
-import songModel from './models/song.model.js'
-import artistModel from './models/artists.model.js'
 import { SongController } from './Controllers/song.controller.js'
+import { ProfileController } from './controllers/ProfileController.js'
+import { albumController } from './controllers/album.controller.js'
+import { artistController } from './controllers/artist.controller.js'
 const app = express()
 app.use(express.urlencoded({extended:true}))
 
@@ -13,6 +13,9 @@ const port = process.env.PORT
 dotenv.config()
 
 app.use(SongController)
+app.use(ProfileController)
+app.use(artistController)
+app.use(albumController)
 
 
 
@@ -34,5 +37,5 @@ app.get('/artists', async (req, res)=>{
     }
 })
 app.listen(port,()=>{
-    console.log(`webserveren is runing now on http:/localhost:${port}`);
+    console.log(`webserveren is runing now on http://localhost:${port}`);
 })
