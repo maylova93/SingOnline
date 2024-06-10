@@ -1,0 +1,66 @@
+@import '../scss/helper/variables';
+@import '../scss/helper/mixins';
+@import '../scss/components/forms';
+@import '../scss/layout/footer';
+@import '../scss/layout/navigation';
+@import '../scss/pages/home';
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  color: $secondary-color;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  @media (min-width: 1024px) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    color: $primary-color;
+    transition: color 0.3s;
+
+    &:hover {
+      color: lighten($primary-color, 20%);
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    transition: color 0.3s;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+.section_one{
+  position: relative;
+}
+ #myVideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
