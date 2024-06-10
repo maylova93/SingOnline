@@ -1,0 +1,28 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    input[type="email"] {
+      padding: 0.3rem;
+      margin-bottom: 0.5rem;
+      border: none;
+      border-radius: 0.3rem;
+      width: 100%;
+    }
+  
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.3rem;
+      background-color: $primary-color;
+      color: $secondary-color;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: lighten($primary-color, 10%);
+      }
+    }
+  }
+  
